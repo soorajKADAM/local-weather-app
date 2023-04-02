@@ -9,8 +9,7 @@ jobs:
 
       - restore_cache:
           keys:
-            - v1-dependencies-{{ checksum "package-lock.json" }}
-      - run: npm install npm@latest -g    
+            - v1-dependencies-{{ checksum "package-lock.json" }}   
       - run: npm ci
 
       # force update the webdriver, so it runs with latest version of Chrome
