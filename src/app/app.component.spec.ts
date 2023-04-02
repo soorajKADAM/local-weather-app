@@ -6,7 +6,7 @@ import { AppComponent } from './app.component'
 describe('AppComponent', () => {
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [AppComponent,  createComponentMock('CurrentWeatherComponent')],
+      declarations: [AppComponent, createComponentMock('CurrentWeatherComponent')],
     }).compileComponents()
   })
 
@@ -20,8 +20,6 @@ describe('AppComponent', () => {
     const fixture = TestBed.createComponent(AppComponent)
     fixture.detectChanges()
     const compiled = fixture.nativeElement as HTMLElement
-    expect(compiled.querySelector('h1')?.textContent).toContain(
-      'LocalCast Weather'
-    )
+    expect(compiled.querySelector('h1')?.textContent).toContain('LocalCast Weather')
   })
 })
