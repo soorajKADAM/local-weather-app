@@ -11,7 +11,7 @@ jobs:
           keys:
             - v1-dependencies-{{ checksum "package-lock.json" }}
 
-      - run: npm ci 
+      - run: npm ci
 
       # force update the webdriver, so it runs with latest version of Chrome
       # - run: cd ./node_modules/protractor && npm i webdriver-manager@latest
@@ -26,7 +26,7 @@ jobs:
       - run: npm run style
       - run: npm run lint
 
-      - run: npm run build:production
+      - run: npm run build:prod
       - run: npm run test:coverage -- --watch=false
 
       - run:
