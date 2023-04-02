@@ -6,6 +6,7 @@
     "tslint-etc"
   ],
   "rules": {
+    "no-console": false,
     "no-unused-declaration": true,
     "max-line-length": [
       false,
