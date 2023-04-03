@@ -22,7 +22,7 @@ describe('CurrentWeatherComponent', () => {
       declarations: [CurrentWeatherComponent],
       // imports: [HttpClientTestingModule], // If we have to include HttpClientTestingModule then we're not really writing a unit test, because CurrentWeatherComponent shouldn't know about HttpClient
       providers: [{ provide: WeatherService, useValue: weatherServiceSpy }],
-      imports: [MaterialModule]
+      imports: [MaterialModule],
     }).compileComponents()
 
     // weatherServiceMock = TestBed.inject(WeatherService) as any
