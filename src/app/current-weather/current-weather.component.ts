@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core'
+import { Component, Input, OnInit } from '@angular/core'
 
 import { ICurrentWeather } from '../interfaces'
 import { WeatherService } from '../weather/weather.service'
@@ -15,11 +15,7 @@ export class CurrentWeatherComponent implements OnInit {
       ? ['th', 'st', 'nd', 'rd'][(n > 3 && n < 21) || n % 10 > 3 ? 0 : n % 10]
       : ''
   }
-  current: ICurrentWeather
+  @Input() current: ICurrentWeather
   constructor(private weatherService: WeatherService) {}
-  ngOnInit(): void {
-    this.weatherService
-      .getCurrentWeather('Bethesda', 'US')
-      .subscribe((data) => (this.current = data))
-  }
+  ngOnInit(): void { }
 }
