@@ -11,8 +11,4 @@ export const fakeWeather: ICurrentWeather = {
   temperature: 280.32,
   description: 'light intensity drizzle',
 }
-export class WeatherServiceFake implements IWeatherService {
-  public getCurrentWeather(city: string, country: string): Observable<ICurrentWeather> {
-    return of(fakeWeather)
-  }
-}
+
