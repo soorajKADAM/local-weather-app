@@ -9,6 +9,7 @@ body{
   height:100%;
   /* background: url('../assets/img/cloudy.jpg') no-repeat center center fixed; */
   background-size:100%;
+  text-align: center;
 }
 
 @media screen and (min-width: 1025px) {

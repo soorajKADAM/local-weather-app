@@ -8,7 +8,7 @@ import { WeatherService } from '../weather/weather.service'
   templateUrl: './current-weather.component.html',
   styleUrls: ['./current-weather.component.css'],
 })
-export class CurrentWeatherComponent implements OnInit {
+export class CurrentWeatherComponent{
   getOrdinal(date: number) {
     const n = new Date(date).getDate()
     return n > 0
@@ -17,5 +17,4 @@ export class CurrentWeatherComponent implements OnInit {
   }
   @Input() current: ICurrentWeather
   constructor(private weatherService: WeatherService) {}
-  ngOnInit(): void { }
 }

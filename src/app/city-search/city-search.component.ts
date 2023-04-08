@@ -15,10 +15,10 @@ export class CitySearchComponent implements OnInit {
 
   constructor(private weatherService: WeatherService){}
   ngOnInit(): void {
-    this.search.valueChanges.pipe(debounceTime(1000)).subscribe((searchValue: string) => {
+    this.search.valueChanges.pipe(debounceTime(1000)).subscribe((searchValue: string | null) => {
       if (!this.search.invalid) {
-        this.searchEvent.emit(searchValue)
-        const userInput = searchValue.split(',').map(s => s.trim())
+        this.searchEvent.emit(searchValue!)
+        const userInput = searchValue!.split(',').map(s => s.trim())
       this.weatherService.getCurrentWeather(
         userInput[0],
         userInput.length > 1 ? userInput[1] : undefined
