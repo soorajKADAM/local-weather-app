@@ -6,7 +6,14 @@ import { MatIconModule } from '@angular/material/icon'
 import { MatInputModule } from '@angular/material/input'
 import { MatToolbarModule } from '@angular/material/toolbar'
 
-const modules = [MatButtonModule, MatToolbarModule, MatIconModule, MatCardModule,MatFormFieldModule ,MatInputModule ]
+const modules = [
+  MatButtonModule,
+  MatToolbarModule,
+  MatIconModule,
+  MatCardModule,
+  MatFormFieldModule,
+  MatInputModule,
+]
 @NgModule({
   declarations: [],
   imports: modules,
