@@ -10,7 +10,7 @@ import { WeatherService } from '../weather/weather.service'
   styleUrls: ['./city-search.component.css'],
 })
 export class CitySearchComponent implements OnInit {
-  @Output() searchEvent = new EventEmitter<string>()
+  // @Output() searchEvent = new EventEmitter<string>()
   search = new FormControl('', [Validators.minLength(2)])
 
   constructor(private weatherService: WeatherService) {}
@@ -19,7 +19,7 @@ export class CitySearchComponent implements OnInit {
       .pipe(debounceTime(1000))
       .subscribe((searchValue: string | null) => {
         if (!this.search.invalid) {
-          this.searchEvent.emit(searchValue!)
+          // this.searchEvent.emit(searchValue!)
           const userInput = searchValue!.split(',').map((s) => s.trim())
           this.weatherService
             .getCurrentWeather(
